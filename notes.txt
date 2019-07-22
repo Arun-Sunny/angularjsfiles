@@ -1,0 +1,31 @@
+Angular JS directives
+
+they are basically used to like add "things" to html
+
+to do it, just add the ng-<CORRESPONDING DIRECTIVE>
+
+CORRESPONDING DIRECTIVEs include:-
+    ng-app
+    ng-init
+    ng-bind
+    ng-model
+
+ng-app :- apply it to whatever tag you need angular JS
+
+ng-model :- You use it to bind html controls to application data.
+for example, suppose you want a reactive text field, you add this to the
+input tag of the text. Whatever is in {{}} will be replaced in 
+
+ng-bind:- basically to output to whatever html tag you need
+
+ng-controller defines the condtrolles
+
+ng-repeat used as a loop
+
+ng-value to bind value to a tag
+
+ng-disabled :- used to disable like disable a button
+ng-show :- shows the hidden things
+
+modules define angjs applications, 
+controllers control the applicaitons

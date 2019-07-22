@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+        <p>input:</p>
+        <input type="checkbox"  ng-model="enableDisable" > 
+        <button ng-disabled="enableDisable">click</button>
+        <br>
+        <br>
+        <br>
+        <p>{{Clicks}}</p>
+        <button ng-Click="Clicks = Clicks+1 ">Click here dude</button>
+
+    </div>
+  </body>
+</html>
