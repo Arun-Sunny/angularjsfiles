@@ -14,7 +14,25 @@ ng-app :- apply it to whatever tag you need angular JS
 
 ng-model :- You use it to bind html controls to application data.
 for example, suppose you want a reactive text field, you add this to the
-input tag of the text. Whatever is in {{}} will be replaced in 
+input tag of the text. Whatever is in {{}} will be replaced in.
+also, yoU can use ng-model for validation.
+<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+  Email:
+  <input type="email" name="myAddress" ng-model="myText" required>
+  <h1>Status</h1>
+  {{myForm.myAddress.$valid}}
+  {{myForm.myAddress.$dirty}}
+  {{myForm.myAddress.$touched}}
+</form>
+
+also, ng-model can be used to check validation like for example, email
+<form ng-app="" name="myForm">
+  Email:
+  <input type="email" name="myAddress" ng-model="text">
+  <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+</form>
+
+
 
 ng-bind:- basically to output to whatever html tag you need
 
@@ -29,3 +47,9 @@ ng-show :- shows the hidden things
 
 modules define angjs applications, 
 controllers control the applicaitons
+
+use of module in angular js:-
+ inside the script file, give (you can also use the scripts tag)
+    :- var app = angular.module("myApp",[]);
+    :- this "myApp" is whatever we give inside ng-app <<- DONT FORGET!!
+    :-
