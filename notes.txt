@@ -1,55 +1,64 @@
 Angular JS directives
 
-they are basically used to like add "things" to html
+1) they are basically used to like add "things" to html
 
-to do it, just add the ng-<CORRESPONDING DIRECTIVE>
+2) to do it, just add the ng-<CORRESPONDING DIRECTIVE>
 
-CORRESPONDING DIRECTIVEs include:-
+3) CORRESPONDING DIRECTIVEs include:-
     ng-app
     ng-init
     ng-bind
     ng-model
 
-ng-app :- apply it to whatever tag you need angular JS
+4) ng-app :- apply it to whatever tag you need angular JS
 
-ng-model :- You use it to bind html controls to application data.
-for example, suppose you want a reactive text field, you add this to the
-input tag of the text. Whatever is in {{}} will be replaced in.
-also, yoU can use ng-model for validation.
-<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
-  Email:
-  <input type="email" name="myAddress" ng-model="myText" required>
-  <h1>Status</h1>
-  {{myForm.myAddress.$valid}}
-  {{myForm.myAddress.$dirty}}
-  {{myForm.myAddress.$touched}}
-</form>
+5) ng-model :- You use it to bind html controls to application data.
+    for example, suppose you want a reactive text field, you add this to the
+    input tag of the text. Whatever is in {{}} will be replaced in.
+    also, yoU can use ng-model for validation.
+    <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <h1>Status</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+    </form>
 
-also, ng-model can be used to check validation like for example, email
-<form ng-app="" name="myForm">
-  Email:
-  <input type="email" name="myAddress" ng-model="text">
-  <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
-</form>
+    also, ng-model can be used to check validation like for example, email
+    <form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+    </form> 
 
+6) ng-bind:- basically to output to whatever html tag you need
+    instead of using ng-bind, you can also use {{}}
 
+7) ng-controller defines the condtrollesng-bind:- basically to output to whatever html tag you need
 
-ng-bind:- basically to output to whatever html tag you need
+8) ng-controller defines the condtrolles
 
-ng-controller defines the condtrolles
+9) ng-repeat used as a loop
 
-ng-repeat used as a loop
+10) ng-value to bind value to a tag
 
-ng-value to bind value to a tag
+11) ng-disabled :- used to disable like disable a button
+12) ng-show :- shows the hidden things
 
-ng-disabled :- used to disable like disable a button
-ng-show :- shows the hidden things
+13) modules define angjs applications, 
+14) controllers control the applicaitons
 
-modules define angjs applications, 
-controllers control the applicaitons
-
-use of module in angular js:-
+15) use of module in angular js:-
  inside the script file, give (you can also use the scripts tag)
-    :- var app = angular.module("myApp",[]);
-    :- this "myApp" is whatever we give inside ng-app <<- DONT FORGET!!
-    :-
+    :- var app = angular.module("myApp",[]ng-bind:- basically to output to whatever html tag you need
+
+16) ng-controller defines the controller
+    controllers can have functions as variables
+    controllers are basically javascript objects
+    var app = angular.module('myApp', []);
+    app.controller('personCtrl', function($scope)
+
+17) to get modules in external files, we give :-
+            angular.module('myapp',[]).controller('ze controller name',function($scope))
+        
