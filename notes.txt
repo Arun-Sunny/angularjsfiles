@@ -16,20 +16,21 @@ Angular JS directives
     for example, suppose you want a reactive text field, you add this to the
     input tag of the text. Whatever is in {{}} will be replaced in.
     also, yoU can use ng-model for validation.
+
     <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
-    Email:
-    <input type="email" name="myAddress" ng-model="myText" required>
-    <h1>Status</h1>
-    {{myForm.myAddress.$valid}}
-    {{myForm.myAddress.$dirty}}
-    {{myForm.myAddress.$touched}}
+        Email:
+            <input type="email" name="myAddress" ng-model="myText" required>
+            <h1>Status</h1>
+            {{myForm.myAddress.$valid}}
+            {{myForm.myAddress.$dirty}}
+            {{myForm.myAddress.$touched}}
     </form>
 
     also, ng-model can be used to check validation like for example, email
     <form ng-app="" name="myForm">
-    Email:
-    <input type="email" name="myAddress" ng-model="text">
-    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+        Email:
+        <input type="email" name="myAddress" ng-model="text">
+        <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
     </form> 
 
 6) ng-bind:- basically to output to whatever html tag you need
@@ -51,13 +52,35 @@ Angular JS directives
 
 15) use of module in angular js:-
  inside the script file, give (you can also use the scripts tag)
-    :- var app = angular.module("myApp",[]ng-bind:- basically to output to whatever html tag you need
+    :- 
+        var app = angular.module("myApp",[])
 
 16) ng-controller defines the controller
     controllers can have functions as variables
     controllers are basically javascript objects
+
     var app = angular.module('myApp', []);
-    app.controller('personCtrl', function($scope)
+        app.controller('personCtrl', function($scope)
 
 17) to get modules in external files, we give :-
-            angular.module('myapp',[]).controller('ze controller name',function($scope))
+    angular.module('myapp',[]).controller('ze controller name',function($scope))
+
+18) Various filters are used in javascipt to change the formatting of text, such as lowercase or UPPERCSASE or currency
+    we use the | character followed by the formatting to be done
+    for example:-
+    {{student.fees | currency}}
+
+19) ng-repeat can be used to print like a loop
+    for example :- 
+                    <tr ng-repeat = "subject in student.subjects">
+                        <td>{{ subject.name }}</td>
+                        <td>{{ subject.marks }}</td>
+                     </tr>
+
+            First name      :<input type="text" name="fName"><br>
+            Last name       :<input type="text" name="lName"><br>
+            Address         :<input type="text" name="Address"><br>
+            School          :<input type="text" name="School"><br>
+            College         :<input type="text" name="College"><br>
+            Grade           :<input type="text" name="Grade"><br>
+            Achievements    :<input type="text" name="Achievements"><br>
