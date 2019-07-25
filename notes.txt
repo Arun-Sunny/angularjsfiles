@@ -62,6 +62,14 @@ Angular JS directives
     var app = angular.module('myApp', []);
         app.controller('personCtrl', function($scope)
 
+    if there is something like ng-model ="data", to access it in the controller just do
+    $scope.data
+
+    to remove or delete elements from javascript array use splice
+    arr=arr.splice(x,1) :- where x will give the position and 1 indicates how many elements to be removed
+
+    indexOf() will return -1 if not in array
+
 17) to get modules in external files, we give :-
     angular.module('myapp',[]).controller('ze controller name',function($scope))
 
